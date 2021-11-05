@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-100 text-gray-500 leading-loose;
+  }
+
+  h1 {
+    @apply font-semibold text-xl;
+  }
+}
+
+@layer components {
+  .nav-bar {
+    @apply w-full bg-indigo-500 flex items-center justify-around py-2;
+  }
+  .nav-bar a {
+    @apply text-center uppercase text-white px-10 py-1 hover:bg-indigo-400 rounded-xl;
+  }
+  .emp {
+    @apply font-semibold text-indigo-500;
+  }
+}
