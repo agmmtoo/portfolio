@@ -1,3 +1,23 @@
+:root {
+  @apply .light;
+}
+
+.dark {
+  --color-bg-primary: #121212;
+  --color-bg-secondary: #000000;
+  --color-text-primary: #e2e2e2;
+  --color-text-secondary: #ffffff;
+  --color-text-accent: #7dd7d1;
+}
+
+.light {
+  --color-bg-primary: #e2e2e2;
+  --color-bg-secondary: #ffffff;
+  --color-text-primary: #121212;
+  --color-text-secondary: #000000;
+  --color-text-accent: #00aa9c;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
