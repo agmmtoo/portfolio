@@ -1,6 +1,6 @@
 const Home = () => (
     <>
-        <div className="m-5 flex flex-row flex-wrap rounded-md shadow-md justify-center" >
+        <div className="dark:bg-blueGray-700 m-5 flex flex-row flex-wrap rounded-md shadow-md justify-center" >
             <img
                 src="https://github.com/agmyintmyatoo.png"
                 alt="ammo"
