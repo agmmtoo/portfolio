@@ -8,7 +8,7 @@ const toggleDarkMOde = dark => {
 }
 
 const Moon = () => {
-    const userDarkMode = window.matchMedia('(prefers-color-scheme)').matches;
+    const userDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
     console.log(`got user preference: ${userDarkMode}`);
     const [darkMode, setDarkMode] = useState(userDarkMode);
     toggleDarkMOde(darkMode);
