@@ -28,11 +28,14 @@ const Fetch = ({
         return () => cancel();
     }, [url]);
 
-    return (
-        (loading && renderLoading) ||
-        (data && renderData(data)) ||
-        (error && renderError(error))
-    );
+    // return (
+    //     (loading && renderLoading) ||
+    //     (data && renderData(data)) ||
+    //     (error && renderError(error))
+    // );
+    if (loading) return renderLoading;
+    if (data) return renderData(data);
+    if (error) renderError(error);
 
 };
 
