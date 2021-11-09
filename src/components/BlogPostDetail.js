@@ -1,12 +1,24 @@
 import { useParams } from 'react-router-dom';
 import { toTitle } from '../formatter';
+import Fetch from './hooks/Fetch';
+import ReactMarkdown from 'react-markdown';
 
 const BlogPostDetail = () => {
-    const { title } = useParams();
+    const { folder, title } = useParams();
     const Title = toTitle(title);
     return (
-        <p>fetch post and parse markdown here using {Title}</p>
+        <Fetch
+            url={`https://raw.githubusercontent.com/agmyintmyatoo/BlogPosts/main/${folder}/${Title}`}
+            renderData={renderMarkdown}
+        />
     )
 };
+
+const renderMarkdown = ({ data }) => {
+    console.log(data);
+    return (
+        <ReactMarkdown children={data} />
+    );
+}
 
 export default BlogPostDetail;

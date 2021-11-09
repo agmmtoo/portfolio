@@ -15,7 +15,7 @@ const AppRoutes = () => (
         <Routes>
             <Route path='/' element={<Home />} exact />
             <Route path='/blog' element={<Blog />} exact />
-            <Route path='/blog/:title' element={<BlogPostDetail />} exact />
+            <Route path='/blog/:folder/:title' element={<BlogPostDetail />} exact />
             <Route path='*' element={<Error404 />} />
         </Routes>
     </App>

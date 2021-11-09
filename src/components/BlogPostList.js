@@ -29,11 +29,12 @@ const renderPostList = ({ data: list }) => {
             {list.map(({
                 name: title,
                 download_url,
+                path,
                 sha,
                 size
             }) => (
                 <div key={sha} className="w-full p-2 rounded hover:text-gray-400">
-                    <Link to={`/blog/${toSlug(title)}`}>
+                    <Link to={`/blog/${path.split('/')[0]}/${toSlug(title)}`}>
                         {title.slice(0, title.length - 3)}
                     </Link>
                 </div>
